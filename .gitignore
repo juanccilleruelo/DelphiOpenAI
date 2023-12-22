@@ -1,0 +1,7 @@
+/DelphiOpenAI/*.local
+/DelphiOpenAI/*.res
+/DelphiOpenAI/Win32/Debug/*.dcu
+/DelphiOpenAI/__history/*.~1~
+/DelphiOpenAI/__history/*.~2~
+/DelphiOpenAI/__history
+/DelphiOpenAI/*.dsv
