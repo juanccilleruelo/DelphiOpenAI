@@ -1,0 +1,126 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'OpenAI ChatGPT Example'
+  ClientHeight = 271
+  ClientWidth = 480
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object MemoAnswer: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    TextSettings.WordWrap = True
+    Align = Client
+    Margins.Left = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Size.Width = 464.000000000000000000
+    Size.Height = 130.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 460.000000000000000000
+    Viewport.Height = 126.000000000000000000
+  end
+  object ComboBoxModel: TComboBox
+    Align = MostTop
+    Enabled = False
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 33.000000000000000000
+    Size.Width = 464.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    OnChange = ComboBoxModelChange
+  end
+  object Label1: TLabel
+    Align = MostTop
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 464.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Trimming = None
+    Text = 'Models'
+    TabOrder = 5
+  end
+  object Layout1: TLayout
+    Align = Top
+    Position.Y = 55.000000000000000000
+    Size.Width = 480.000000000000000000
+    Size.Height = 78.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    object EditAsk: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 3
+      Text = 'Hello, how are you?'
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Size.Width = 464.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = EditAskChange
+      OnTyping = EditAskChange
+      OnKeyUp = EditAskKeyUp
+    end
+    object BtnAsk: TButton
+      Align = Right
+      Default = True
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 248.000000000000000000
+      Position.Y = 46.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Ask'
+      TextSettings.Trimming = None
+      OnClick = BtnAskClick
+    end
+    object BtnCheckModerations: TButton
+      Align = Right
+      Default = True
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 336.000000000000000000
+      Position.Y = 46.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Check Moderations'
+      TextSettings.Trimming = None
+      OnClick = BtnCheckModerationsClick
+    end
+  end
+  object ChatGpt: TChatGpt
+    Temperature = 0.100000000000000000
+    Model = 'text-davinci-003'
+    URL = 'https://api.openai.com/v1'
+    OnAnswer = ChatGptAnswer
+    OnError = ChatGptError
+    OnModelsLoaded = ChatGptModelsLoaded
+    OnCompletionsLoaded = ChatGptCompletionsLoaded
+    OnModerationsLoaded = ChatGptModerationsLoaded
+    Left = 80
+    Top = 96
+  end
+end

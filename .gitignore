@@ -5,3 +5,8 @@
 /DelphiOpenAI/__history/*.~2~
 /DelphiOpenAI/__history
 /DelphiOpenAI/*.dsv
+/DelphiOpenAI/*.identcache
+/Example/__history
+/Example/*.local
+/Example/*.exe
+/Example/*.res
