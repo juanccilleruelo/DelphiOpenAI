@@ -5,3 +5,6 @@ All you need is your own API key from here: https://platform.openai.com/account/
 
 Copyright © 2023 Ralph Dietrich.
 For this fork. Copyright © 2023 Juan C.Cilleruelo
+
+
+He modificado este archivo para ver los resultados de hacer commit; 
